@@ -1,0 +1,113 @@
+body {
+    background-color: black; /* Set background color to black */
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full height */
+}
+
+/* Footer container */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark footer background */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the left */
+    gap: 10px;
+}
+
+/* Reach Me Out heading */
+.footer h2 {
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+/* Contacts section */
+.contacts {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 15px; /* Push contacts to the left */
+}
+
+/* Individual contact icons */
+.contact-icon {
+    width: 40px; /* Adjust icon size */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.contact-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contact-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Achievements Section */
+.achievements {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the left */
+}
+
+/* Achievements Heading */
+.achievements h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Achievement Cards Grid */
+.achievement-grid {
+    display: grid;
+    width: 100%;
+    gap: 15px;
+    padding: 15px;
+}
+
+/* Individual Achievement Card */
+.achievement-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    border-radius: 10px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s, background 0.3s;
+    cursor: pointer;
+}
+
+/* Responsive Grid Layout */
+@media (max-width: 600px) {
+    .achievement-grid {
+        grid-template-columns: repeat(1fr);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .achievement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .achievement-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 per row on desktops */
+    }
+}
